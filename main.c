@@ -23,27 +23,31 @@ int main()
 }
 
 void printKolom() {
-    printf("a           c           b           F(a)            F(c)            F(b) \n\n");
+    printf("i   a           c           b           F(a)            F(c) \n\n");
 }
 
 void regulaFalsi() {
+    int i = 0;
     double a=1, b=2, c;
     double errorTolerant = 0.0000001, Fc;
     printKolom();
+
     do {
         c = (f(b)*a - f(a)*b) / (f(b) - f(a));
         Fc = f(c);
         // Tampilkan Value
-        printf("%.7f    %.7f    %.7f    %.7f    %.7f    %.7f \n", a,c,b,f(a),Fc,f(b));
+        printf("%i  %.7f    %.7f    %.7f    %.7f    %.7f     \n\n", i+1,a,c,b,f(a),Fc);
 
         if (f(a) * Fc > 0) {
             a = c;
         } else {
             b = c;
         }
+        i++;
     } while (Fc > errorTolerant);
 
     printf("\n");
+    printf("Perulangan berhenti pada iterasi ke- %i\n", i);
     printf("Nilai akar dari F(x) = x^2 - e^x + 3 adalah : %.7f", c);
 }
 
