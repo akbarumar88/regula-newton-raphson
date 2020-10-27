@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1603764055 source:c:\users\akbar\documents\tugas\semester 3\metode numerik\pertemuan 6\demo_mednum\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
